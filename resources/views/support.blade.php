@@ -41,11 +41,11 @@
 </div>
 <div class="contact">
     <h2>Наши контакты</h2>
-    <p><strong>Email:</strong> <a href="mailto:Nurzhole@gmail.com"><i class="fas fa-envelope"></i> Nurzhole@gmail.com</a></p>
-    <p><strong>Телефон:</strong> <a href="tel:+77473695738"><i class="fas fa-phone"></i> +7 747 369 5738</a></p>
+    <p><strong>Email:</strong> <a href="mailto:aimanakbota0@gmail.com"><i class="fas fa-envelope"></i> aimanakbota0@gmail.com</a></p>
+    <p><strong>Телефон:</strong> <a href="tel:+77770295229"><i class="fas fa-phone"></i> +7 777 029 52 29</a></p>
 
     <div class="social-links">
-        <a href="https://github.com/Nurzholtoni" target="_blank">GitHub</a>
+        <a href="wa.me/+77770295229" target="_blank">WhatsApp</a>
         <a href="https://t.me/nurzholtoni" target="_blank">Telegram</a>
         <a href="https://nurzholtoni" target="_blank">Instagram</a>
     </div>

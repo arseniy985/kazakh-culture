@@ -23,7 +23,7 @@ class ProductController extends Controller
     // Сохранение нового товара
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required',
             'price' => 'required|numeric',

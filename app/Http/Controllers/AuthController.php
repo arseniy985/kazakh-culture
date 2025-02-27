@@ -15,7 +15,6 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    // Регистрация
     public function register(Request $request)
     {
         $request->validate([
@@ -32,24 +31,14 @@ class AuthController extends Controller
 
         Auth::login($user);
 
+
         return redirect()->route('dashboard');
     }
 
-//    public function store(Request $request)
-//    {
-//        $user = User::create([
-//            'name' => $request->name,
-//            'email' => $request->email,
-//            'password' => Hash::make($request->password),
-//        ]);
-//
-//        Auth::login($user);
-//
-//        return redirect('/register'); // Здесь происходит перенаправление
-//    }
 
 
-    // Показать форму входа
+
+
     public function showLoginForm()
     {
         return view('auth.login');

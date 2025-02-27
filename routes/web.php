@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', function () {
-        return view('dashboard'); // Пример страницы для авторизованных пользователей
+        return view('dashboard');
     })->name('dashboard');
 });
 

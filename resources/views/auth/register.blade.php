@@ -1,149 +1,52 @@
+<x-guest-layout>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
 
-{{--@extends('layouts.app')--}}
-
-{{--@section('content')--}}
-{{--    <div class="register-container">--}}
-{{--        <div class="register-box">--}}
-{{--            <h1>Регистрация</h1>--}}
-{{--            <form action="{{ route('register') }}" method="POST">--}}
-{{--                @csrf--}}
-{{--                <div class="form-group">--}}
-{{--                    <label for="name">Имя</label>--}}
-{{--                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>--}}
-{{--                </div>--}}
-{{--                <div class="form-group">--}}
-{{--                    <label for="email">Email</label>--}}
-{{--                    <input type="email" id="email" name="email" placeholder="Введите ваш email" required>--}}
-{{--                </div>--}}
-{{--                <div class="form-group">--}}
-{{--                    <label for="password">Пароль</label>--}}
-{{--                    <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>--}}
-{{--                </div>--}}
-{{--                <div class="form-group">--}}
-{{--                    <label for="password_confirmation">Подтверждение пароля</label>--}}
-{{--                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Подтвердите ваш пароль" required>--}}
-{{--                </div>--}}
-{{--                <button type="submit" class="register-button">Зарегистрироваться</button>--}}
-{{--                <div class="login-link">--}}
-{{--                    <p>Уже есть аккаунт? <a href="{{ route('login') }}">Войти</a></p>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--@endsection--}}
-
-
-@extends('layouts.app')
-
-@section('content')
-    <style>
-        body {
-            background: url('{{ asset('images/images.jpeg') }}') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        /*.register-container {*/
-        /*    display: flex;*/
-        /*    justify-content: center;*/
-        /*    align-items: center;*/
-        /*    height: 100vh;*/
-        /*    width: 100vw;*/
-        /*}*/
-
-        .register-box {
-            background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .register-box h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #000;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #000;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .register-button {
-            width: 100%;
-            padding: 10px;
-            background: #000;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .login-link {
-            margin-top: 20px;
-        }
-
-        .login-link a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .login-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
-
-    <div class="register-container">
-        <div class="register-box">
-            <h1>Регистрация</h1>
-            <form action="{{ route('register') }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Эл.Почта</label>
-                    <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Пароль</label>
-                    <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
-                </div>
-                <div class="form-group">
-                    <label for="password_confirmation">Подтверждение пароля</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Подтвердите ваш пароль" required>
-                </div>
-                <button type="submit" class="register-button">Зарегистрироваться</button>
-                <div class="login-link">
-                    <p>Уже есть аккаунт? <a href="{{ route('login') }}">Войти</a></p>
-                </div>
-            </form>
+        <!-- Name -->
+        <div>
+            <x-input-label for="name" :value="__('Name')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
-    </div>
-@endsection
 
+        <!-- Email Address -->
+        <div class="mt-4">
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
+
+            <x-text-input id="password" class="block mt-1 w-full"
+                            type="password"
+                            name="password"
+                            required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mt-4">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+
+            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                            type="password"
+                            name="password_confirmation" required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button class="ms-4">
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>

@@ -1,27 +1,17 @@
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
 
-@extends('layouts.app')
-
-@section('title', 'О блоге')
-
-@section('content')
-    <div class="container my-5">
-        <div class="text-center">
-            <h1>Добро пожаловать в <span style="color: #007bff;">"Блог Барселоны"</span>!</h1>
-            <p class="lead">
-                Привет, дорогие друзья и фанаты футбола! Меня зовут Нуржол, и я — создатель этого блога, посвящённого величайшему футбольному клубу "Барселона". Я веб-разработчик и страстный поклонник футбола, который решил объединить свои профессиональные навыки с любовью к спорту.
-            </p>
-            <p>
-                Этот проект — моя инициатива создать пространство, где фанаты "Барселоны" смогут узнавать интересные факты, обсуждать последние новости и просто наслаждаться атмосферой любимой команды. Я вложил в этот блог много времени и души, чтобы сделать его удобным, интересным и вдохновляющим для каждого посетителя.
-            </p>
-            <hr>
-            <h2>Узнайте больше</h2>
-            <p>
-                Перейдите к разделу <a href="{{ route('about') }}" class="text-decoration-none">"Обо мне"</a>, чтобы узнать больше о моей работе и оставить свой отзыв.
-                Также не забудьте посетить <a href="{{ route('products.index') }}" class="text-decoration-none">раздел товаров</a>, чтобы найти атрибутику клуба "Барселона".
-            </p>
-            <a href="{{ route('about') }}" class="btn btn-info">Обо мне</a>
-            <a href="{{ route('products.index') }}" class="btn btn-primary">Перейти к товарам</a>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
         </div>
     </div>
-@endsection
-
+</x-app-layout>

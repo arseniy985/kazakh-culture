@@ -109,7 +109,7 @@
                         @foreach($traditions as $item)
                             <a href="{{ route('items.show', [$traditionsCategory->slug, $item->slug]) }}" class="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
                                 @if($item->image)
-                                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                         <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
                                     </div>
                                 @endif
@@ -145,7 +145,7 @@
                             @foreach($games as $item)
                                 <a href="{{ route('items.show', [$gamesCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                                     @if($item->image)
-                                        <div class="w-full aspect-[2/1] relative overflow-hidden">
+                                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                             <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
                                         </div>
                                     @endif
@@ -184,7 +184,7 @@
                             @foreach($foods as $item)
                                 <a href="{{ route('items.show', [$foodsCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                                     @if($item->image)
-                                        <div class="w-full aspect-[2/1] relative overflow-hidden">
+                                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                             <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
                                         </div>
                                     @endif
@@ -221,7 +221,7 @@
                             @foreach($patterns as $item)
                                 <a href="{{ route('items.show', [$patternsCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                                     @if($item->image)
-                                        <div class="w-full aspect-[2/1] relative overflow-hidden">
+                                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                             <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
                                         </div>
                                     @endif
@@ -255,7 +255,7 @@
                         <!-- Наурыз -->
                         <a href="{{ route('items.show', ['holidays', 'nauryz']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
-                            <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                 <img src="{{ asset('images/nauryz.jpg') }}" alt="Наурыз" class="w-full h-full object-contain mx-auto">
                             </div>
                             <div class="p-4 text-gray-800">
@@ -267,7 +267,7 @@
                         <!-- Құрбан айт -->
                         <a href="{{ route('items.show', ['holidays', 'qurban']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
-                            <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                 <img src="{{ asset('images/qurban.jpg') }}" alt="Құрбан айт" class="w-full h-full object-contain mx-auto">
                             </div>
                             <div class="p-4 text-gray-800">
@@ -279,7 +279,7 @@
                         <!-- Тәуелсіздік күні -->
                         <a href="{{ route('items.show', ['holidays', 'tauelsizdik']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
-                            <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                 <img src="{{ asset('images/tauelsizdik.jpg') }}" alt="Тәуелсіздік күні" class="w-full h-full object-contain mx-auto">
                             </div>
                             <div class="p-4 text-gray-800">
@@ -303,7 +303,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Абай Құнанбайұлы -->
                         <a href="{{ route('items.show', ['figures', 'abai']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                 <img src="{{ asset('images/abai.jpg') }}" alt="Абай Құнанбайұлы" class="w-full h-full object-contain mx-auto">
                             </div>
                             <div class="p-6 text-gray-800">
@@ -314,7 +314,7 @@
 
                         <!-- Керей мен Жәнібек -->
                         <a href="{{ route('items.show', ['figures', 'kerey-zhanybek']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                 <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-full object-contain mx-auto">
                             </div>
                             <div class="p-6 text-gray-800">
@@ -325,7 +325,7 @@
 
                         <!-- Әлихан Бөкейханов -->
                         <a href="{{ route('items.show', ['figures', 'alikhan']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                                 <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейханов" class="w-full h-full object-contain mx-auto">
                             </div>
                             <div class="p-6 text-gray-800">

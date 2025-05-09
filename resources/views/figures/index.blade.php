@@ -14,7 +14,7 @@
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Абай Құнанбайұлы -->
                 <a href="{{ url('/figures/abai') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                         <img src="{{ asset('images/abai.jpg') }}" alt="Абай Құнанбайұлы" class="w-full h-full object-contain mx-auto">
                     </div>
                     <div class="p-6 text-gray-800">
@@ -25,7 +25,7 @@
 
                 <!-- Керей мен Жәнібек -->
                 <a href="{{ url('/figures/kerey-zhanybek') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                         <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-full object-contain mx-auto">
                     </div>
                     <div class="p-6 text-gray-800">
@@ -36,7 +36,7 @@
 
                 <!-- Әлихан Бөкейхан -->
                 <a href="{{ url('/figures/alikhan') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                         <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейхан" class="w-full h-full object-contain mx-auto">
                     </div>
                     <div class="p-6 text-gray-800">

@@ -11,7 +11,7 @@
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Көкпар -->
                 <a href="/games/kokpar" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                         <img src="{{ asset('images/kokpar.jpg') }}" alt="Көкпар" class="w-full h-full object-contain mx-auto">
                     </div>
                     <div class="p-6 text-gray-800">
@@ -22,7 +22,7 @@
 
                 <!-- Асық ату -->
                 <a href="/games/asyk" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                         <img src="{{ asset('images/asyk.jpg') }}" alt="Асық ату" class="w-full h-full object-contain mx-auto">
                     </div>
                     <div class="p-6 text-gray-800">
@@ -33,7 +33,7 @@
 
                 <!-- Тоғызқұмалақ -->
                 <a href="/games/togyzkumalak" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
                         <img src="{{ asset('images/togyzkumalak.jpg') }}" alt="Тоғызқұмалақ" class="w-full h-full object-contain mx-auto">
                     </div>
                     <div class="p-6 text-gray-800">

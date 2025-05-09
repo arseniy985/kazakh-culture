@@ -214,10 +214,10 @@
                         @if($patterns->count() > 0)
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                                 @foreach($patterns as $pattern)
-                                    <a href="{{ route('items.show', ['categorySlug' => $patternsCategory->slug, 'itemSlug' => $pattern->slug]) }}" class="bg-[#2a1717] rounded-lg overflow-hidden hover:bg-[#3c2424] transition">
-                                        @if($item->image)
-                                            <img src="{{ $pattern->image_url }}" alt="{{ $pattern->title }}" class="w-full h-56 object-cover">
-                                        @endif
+                                    <a href="{{ route('items.show', ['categorySlug' => $patternsCategory->slug, 'itemSlug' => $pattern->slug]) }}" class="bg-[#2a1717] rounded-lg overflow-hidden hover:bg-[#3c2424] transition" style="z-index: 2;">
+                                        <div class="h-[200px] min-h-[150px] max-h-[300px] w-full">
+                                            <img src="{{ $pattern->image_url }}" alt="{{ $pattern->title }}" class="w-full h-full object-contain">
+                                        </div>
                                         <div class="p-6">
                                             <h3 class="text-xl font-bold text-yellow-400 mb-2">{{ $pattern->title }}</h3>
                                             <p class="text-gray-400 line-clamp-3">

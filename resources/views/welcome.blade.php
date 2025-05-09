@@ -109,9 +109,7 @@
                         @foreach($traditions as $item)
                             <a href="{{ route('items.show', [$traditionsCategory->slug, $item->slug]) }}" class="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
                                 @if($item->image)
-                                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                        <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
-                                    </div>
+                                    <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-56 object-cover">
                                 @endif
                                 <div class="p-6">
                                     <h3 class="text-2xl font-semibold text-gray-800">{{ $item->title }}</h3>
@@ -145,9 +143,7 @@
                             @foreach($games as $item)
                                 <a href="{{ route('items.show', [$gamesCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                                     @if($item->image)
-                                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                            <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
-                                        </div>
+                                        <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-56 object-cover">
                                     @endif
                                     <div class="p-6 text-gray-800">
                                         <h3 class="text-2xl font-bold mb-2">{{ $item->title }}</h3>
@@ -184,9 +180,7 @@
                             @foreach($foods as $item)
                                 <a href="{{ route('items.show', [$foodsCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                                     @if($item->image)
-                                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                            <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
-                                        </div>
+                                        <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-56 object-cover">
                                     @endif
                                     <div class="p-6 text-gray-800">
                                         <h3 class="text-2xl font-bold mb-2">{{ $item->title }}</h3>
@@ -205,7 +199,6 @@
 
             @php
                 $patternsCategory = \App\Models\Category::where('slug', 'patterns')->first();
-                $patterns = $patternsCategory ? $patternsCategory->items()->limit(3)->get() : collect();
             @endphp
             
             <!-- Ою-өрнек -->
@@ -217,26 +210,8 @@
                             {{ $patternsCategory->description }}
                         </p>
 
-                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                            @foreach($patterns as $item)
-                                <a href="{{ route('items.show', [$patternsCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                                    @if($item->image)
-                                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                            <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
-                                        </div>
-                                    @endif
-                                    <div class="p-6 text-gray-800">
-                                        <h3 class="text-2xl font-bold mb-2">{{ $item->title }}</h3>
-                                        <p>{{ Str::limit(strip_tags($item->content), 100) }}</p>
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
-
-                        <div class="text-center mt-10">
-                            <a href="{{ route('categories.show', $patternsCategory->slug) }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
-                                Барлық ою-өрнектерді көру
-                            </a>
+                        <div class="text-center mt-8">
+                            <a href="{{ route('categories.show', $patternsCategory->slug) }}" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Ою-өрнектерді көру</a>
                         </div>
                     </div>
                 </section>
@@ -255,9 +230,7 @@
                         <!-- Наурыз -->
                         <a href="{{ route('items.show', ['holidays', 'nauryz']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
-                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                <img src="{{ asset('images/nauryz.jpg') }}" alt="Наурыз" class="w-full h-full object-contain mx-auto">
-                            </div>
+                            <img src="{{ asset('images/nauryz.jpg') }}" alt="Наурыз" class="w-full h-64 object-cover">
                             <div class="p-4 text-gray-800">
                                 <h3 class="text-xl font-bold mb-2">Наурыз мейрамы</h3>
                                 <p class="text-sm">Көктем мен жаңарудың белгісі.</p>
@@ -267,9 +240,7 @@
                         <!-- Құрбан айт -->
                         <a href="{{ route('items.show', ['holidays', 'qurban']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
-                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                <img src="{{ asset('images/qurban.jpg') }}" alt="Құрбан айт" class="w-full h-full object-contain mx-auto">
-                            </div>
+                            <img src="{{ asset('images/qurban.jpg') }}" alt="Құрбан айт" class="w-full h-64 object-cover">
                             <div class="p-4 text-gray-800">
                                 <h3 class="text-xl font-bold mb-2">Құрбан айт</h3>
                                 <p class="text-sm">Құрбан шалу мен жан тазалығының күні.</p>
@@ -279,9 +250,7 @@
                         <!-- Тәуелсіздік күні -->
                         <a href="{{ route('items.show', ['holidays', 'tauelsizdik']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
-                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                <img src="{{ asset('images/tauelsizdik.jpg') }}" alt="Тәуелсіздік күні" class="w-full h-full object-contain mx-auto">
-                            </div>
+                            <img src="{{ asset('images/tauelsizdik.jpg') }}" alt="Тәуелсіздік күні" class="w-full h-64 object-cover">
                             <div class="p-4 text-gray-800">
                                 <h3 class="text-xl font-bold mb-2">Тәуелсіздік күні</h3>
                                 <p class="text-sm">Азаттық пен ұлттық рухтың символы.</p>
@@ -303,10 +272,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Абай Құнанбайұлы -->
                         <a href="{{ route('items.show', ['figures', 'abai']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                <img src="{{ asset('images/abai.jpg') }}" alt="Абай Құнанбайұлы" class="w-full h-full object-contain mx-auto">
-                            </div>
-                            <div class="p-6 text-gray-800">
+                            <img src="{{ asset('images/abai.jpg') }}"   alt="Абай Құнанбайұлы"  class="w-full h-80 object-cover rounded-t-lg">                            <div class="p-6 text-gray-800">
                                 <h3 class="text-2xl font-bold mb-2">Абай Құнанбайұлы</h3>
                                 <p>Қазақ әдебиетінің негізін қалаушы, ұлы ақын және ойшыл.</p>
                             </div>
@@ -314,9 +280,7 @@
 
                         <!-- Керей мен Жәнібек -->
                         <a href="{{ route('items.show', ['figures', 'kerey-zhanybek']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-full object-contain mx-auto">
-                            </div>
+                            <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-64 object-cover">
                             <div class="p-6 text-gray-800">
                                 <h3 class="text-2xl font-bold mb-2">Керей мен Жәнібек хандар</h3>
                                 <p>Қазақ хандығының негізін қалаушылар.</p>
@@ -325,9 +289,7 @@
 
                         <!-- Әлихан Бөкейханов -->
                         <a href="{{ route('items.show', ['figures', 'alikhan']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                                <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейханов" class="w-full h-full object-contain mx-auto">
-                            </div>
+                            <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейханов" class="w-full h-64 object-cover">
                             <div class="p-6 text-gray-800">
                                 <h3 class="text-2xl font-bold mb-2">Әлихан Бөкейханов</h3>
                                 <p>Алаш қозғалысының көшбасшысы, қоғам және мемлекет қайраткері.</p>

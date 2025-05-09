@@ -6,7 +6,7 @@
     #about {
         z-index: 11 !important;
     }
-    
+
 </style>
 
 {{--    <!-- Background Image Section -->--}}
@@ -66,7 +66,7 @@
     <button id="startButton" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
         Бастау
     </button>
-    
+
     <!-- Аудио-плеер -->
     <div id="audioPlayer" class="hidden mt-4 bg-black bg-opacity-70 rounded-lg p-3 text-white shadow-xl">
         <div class="flex items-center align-center justify-center">
@@ -83,7 +83,7 @@
             </div>
             <div class="text-sm font-medium">Қазақ музыкасы</div>
         </div>
-        
+
         <audio id="audioElement" src="{{ asset('audio/music.mp3') }}"></audio>
     </div>
 </div>
@@ -91,12 +91,12 @@
     <!-- Main Content -->
     <main class="py-10">
         <div class="max-w-7xl mx-auto px-4">
-            
+
             @php
                 $traditionsCategory = \App\Models\Category::where('slug', 'traditions')->first();
                 $traditions = $traditionsCategory ? $traditionsCategory->items()->limit(3)->get() : collect();
             @endphp
-            
+
             <!-- Салт-дәстүрлер -->
             @if($traditionsCategory)
                 <section id="traditions" class="w-full min-h-screen bg-[#3b1f1f] py-12 px-6">
@@ -118,7 +118,7 @@
                             </a>
                         @endforeach
                     </div>
-                    
+
                     <div class="text-center mt-8">
                         <a href="{{ route('categories.show', $traditionsCategory->slug) }}" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition">
                             Толығырақ
@@ -129,7 +129,7 @@
                 $gamesCategory = \App\Models\Category::where('slug', 'games')->first();
                 $games = $gamesCategory ? $gamesCategory->items()->limit(3)->get() : collect();
             @endphp
-            
+
             <!-- Ұлттық ойындар -->
             @if($gamesCategory)
                 <section id="games" class="w-full min-h-screen bg-[#3b1f1f] py-16 px-6 text-white">
@@ -166,7 +166,7 @@
                 $foodsCategory = \App\Models\Category::where('slug', 'foods')->first();
                 $foods = $foodsCategory ? $foodsCategory->items()->limit(3)->get() : collect();
             @endphp
-            
+
             <!-- Ұлттық тағамдар -->
             @if($foodsCategory)
                 <section id="foods" class="py-16 bg-[#3b1f1f] text-white">
@@ -201,7 +201,7 @@
                 $patternsCategory = \App\Models\Category::where('slug', 'patterns')->first();
                 $patterns = $patternsCategory ? $patternsCategory->items()->limit(3)->get() : collect();
             @endphp
-            
+
             <!-- Ою-өрнек -->
             @if($patternsCategory)
                 <section id="patterns" class="py-16 bg-[#3b1f1f] text-white">
@@ -215,9 +215,9 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                                 @foreach($patterns as $pattern)
                                     <a href="{{ route('items.show', ['categorySlug' => $patternsCategory->slug, 'itemSlug' => $pattern->slug]) }}" class="bg-[#2a1717] rounded-lg overflow-hidden hover:bg-[#3c2424] transition">
-                                        <div class="h-[200px] min-h-[150px] max-h-[300px] w-full">
-                                            <img src="{{ $pattern->image_url }}" alt="{{ $pattern->title }}" class="w-full h-full object-contain">
-                                        </div>
+                                        @if($item->image)
+                                            <img src="{{ $pattern->image_url }}" alt="{{ $pattern->title }}" class="w-full h-56 object-cover">
+                                        @endif
                                         <div class="p-6">
                                             <h3 class="text-xl font-bold text-yellow-400 mb-2">{{ $pattern->title }}</h3>
                                             <p class="text-gray-400 line-clamp-3">
@@ -327,14 +327,14 @@
             const playPauseButton = document.getElementById('playPauseButton');
             const playIcon = document.getElementById('playIcon');
             const pauseIcon = document.getElementById('pauseIcon');
-            
+
             startButton.addEventListener('click', function() {
                 audioPlayer.classList.remove('hidden');
                 audioElement.play();
                 playIcon.classList.add('hidden');
                 pauseIcon.classList.remove('hidden');
             });
-            
+
             playPauseButton.addEventListener('click', function() {
                 if (audioElement.paused) {
                     audioElement.play();
@@ -359,7 +359,7 @@
         document.getElementById('patternModal').classList.remove('flex');
         document.getElementById('patternModal').classList.add('hidden');
     }
-    
+
 </script>
 
     <!-- Modal терезе -->

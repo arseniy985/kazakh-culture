@@ -228,7 +228,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
                         <!-- Наурыз -->
-                        <a href="{{ url('/holidays/nauryz') }}"
+                        <a href="{{ route('items.show', ['holidays', 'nauryz']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
                             <img src="{{ asset('images/nauryz.jpg') }}" alt="Наурыз" class="w-full h-64 object-cover">
                             <div class="p-4 text-gray-800">
@@ -238,7 +238,7 @@
                         </a>
 
                         <!-- Құрбан айт -->
-                        <a href="{{ url('/holidays/qurban') }}"
+                        <a href="{{ route('items.show', ['holidays', 'qurban']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
                             <img src="{{ asset('images/qurban.jpg') }}" alt="Құрбан айт" class="w-full h-64 object-cover">
                             <div class="p-4 text-gray-800">
@@ -248,7 +248,7 @@
                         </a>
 
                         <!-- Тәуелсіздік күні -->
-                        <a href="{{ url('/holidays/tauelsizdik') }}"
+                        <a href="{{ route('items.show', ['holidays', 'tauelsizdik']) }}"
                            class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 block">
                             <img src="{{ asset('images/tauelsizdik.jpg') }}" alt="Тәуелсіздік күні" class="w-full h-64 object-cover">
                             <div class="p-4 text-gray-800">
@@ -271,7 +271,7 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Абай Құнанбайұлы -->
-                        <a href="{{ url('/figures/abai') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <a href="{{ route('items.show', ['figures', 'abai']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                             <img src="{{ asset('images/abai.jpg') }}"   alt="Абай Құнанбайұлы"  class="w-full h-80 object-cover rounded-t-lg">                            <div class="p-6 text-gray-800">
                                 <h3 class="text-2xl font-bold mb-2">Абай Құнанбайұлы</h3>
                                 <p>Қазақ әдебиетінің негізін қалаушы, ұлы ақын және ойшыл.</p>
@@ -279,7 +279,7 @@
                         </a>
 
                         <!-- Керей мен Жәнібек -->
-                        <a href="{{ url('/figures/kerey-zhanybek') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <a href="{{ route('items.show', ['figures', 'kerey-zhanybek']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                             <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-64 object-cover">
                             <div class="p-6 text-gray-800">
                                 <h3 class="text-2xl font-bold mb-2">Керей мен Жәнібек хандар</h3>
@@ -288,7 +288,7 @@
                         </a>
 
                         <!-- Әлихан Бөкейханов -->
-                        <a href="{{ url('/figures/alikhan') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <a href="{{ route('items.show', ['figures', 'alikhan']) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                             <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейханов" class="w-full h-64 object-cover">
                             <div class="p-6 text-gray-800">
                                 <h3 class="text-2xl font-bold mb-2">Әлихан Бөкейханов</h3>

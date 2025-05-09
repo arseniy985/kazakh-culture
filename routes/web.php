@@ -25,69 +25,93 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('categorie
 Route::get('/categories/{slug}', [CategoryController::class, 'show'])->name('categories.show');
 Route::get('/categories/{categorySlug}/{itemSlug}', [ItemController::class, 'show'])->name('items.show');
 
-// Старые маршруты сохраняем для совместимости
+// Редиректы со старых маршрутов на новые
 Route::get('/holidays', function () {
-    return view('holidays.index');
+    return redirect()->route('categories.show', 'holidays');
 });
+
 Route::get('/holidays/nauryz', function () {
-    return view('holidays.nauryz');
+    return redirect()->route('items.show', ['holidays', 'nauryz']);
 });
 
 Route::get('/holidays/qurban', function () {
-    return view('holidays.qurban');
+    return redirect()->route('items.show', ['holidays', 'qurban']);
 });
 
 Route::get('/holidays/tauelsizdik', function () {
-    return view('holidays.tauelsizdik');
+    return redirect()->route('items.show', ['holidays', 'tauelsizdik']);
 });
 
 Route::get('/traditions', function () {
-    return view('traditions.index');
+    return redirect()->route('categories.show', 'traditions');
 });
 
 Route::get('/traditions/besikke-salu', function () {
-    return view('traditions.besikke-salu');
+    return redirect()->route('items.show', ['traditions', 'besikke-salu']);
 });
+
 Route::get('/traditions/tusaukeser', function () {
-    return view('traditions.tusaukeser');
+    return redirect()->route('items.show', ['traditions', 'tusaukeser']);
 });
+
 Route::get('/traditions/qyz-uzatu', function () {
-    return view('traditions.qyz-uzatu');
+    return redirect()->route('items.show', ['traditions', 'qyz-uzatu']);
 });
+
 Route::get('/games', function () {
-    return view('games.index');
+    return redirect()->route('categories.show', 'games');
 })->name('games');
 
 Route::get('/games/kokpar', function () {
-    return view('games.kokpar');
+    return redirect()->route('items.show', ['games', 'kokpar']);
 });
 
 Route::get('/games/asyk', function () {
-    return view('games.asyk');
+    return redirect()->route('items.show', ['games', 'asyk']);
 });
 
 Route::get('/games/togyzkumalak', function () {
-    return view('games.togyzkumalak');
+    return redirect()->route('items.show', ['games', 'togyzkumalak']);
 });
+
 Route::get('/foods', function () {
-    return view('foods.index');
+    return redirect()->route('categories.show', 'foods');
 });
 
 Route::get('/foods/besbarmak', function () {
-    return view('foods.besbarmak');
+    return redirect()->route('items.show', ['foods', 'besbarmak']);
 });
 
 Route::get('/foods/kuyrdak', function () {
-    return view('foods.kuyrdak');
+    return redirect()->route('items.show', ['foods', 'kuyrdak']);
 });
 
 Route::get('/foods/qymyz', function () {
-    return view('foods.qymyz');
+    return redirect()->route('items.show', ['foods', 'qymyz']);
 });
+
+Route::get('/figures', function () {
+    return redirect()->route('categories.show', 'figures');
+});
+
+Route::get('/figures/abai', function () {
+    return redirect()->route('items.show', ['figures', 'abai']);
+});
+
+Route::get('/figures/kerey-zhanybek', function () {
+    return redirect()->route('items.show', ['figures', 'kerey-zhanybek']);
+});
+
+Route::get('/figures/alikhan', function () {
+    return redirect()->route('items.show', ['figures', 'alikhan']);
+});
+
+// Паттерны оставляем как есть (по требованию пользователя)
 Route::get('/patterns', function () {
     return view('patterns.index');
+});
 
-});Route::get('/patterns/qoshqar-muyiz', function () {
+Route::get('/patterns/qoshqar-muyiz', function () {
     return view('patterns.qoshqar-muyiz');
 });
 
@@ -97,20 +121,6 @@ Route::get('/patterns/tuiye-taban', function () {
 
 Route::get('/patterns/qos-alqa', function () {
     return view('patterns.qos-alqa');
-});
-Route::get('/figures', function () {
-    return view('figures.index');
-});
-Route::get('/figures/abai', function () {
-    return view('figures.abai');
-});
-
-Route::get('/figures/kerey-zhanybek', function () {
-    return view('figures.kerey-zhanybek');
-});
-
-Route::get('/figures/alikhan', function () {
-    return view('figures.alikhan');
 });
 
 // Чат-бот

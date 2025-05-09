@@ -21,9 +21,11 @@
         z-index: 10 !important;
     }
         body {
-            
             background-color: #3b1f1f;
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .ornament-left {
             position: absolute;
@@ -52,6 +54,10 @@
         }
         .content-container {
             position: relative;
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .site-nav {
             position: sticky; 
@@ -60,9 +66,13 @@
             background-color: white;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+        main {
+            flex: 1 0 auto;
+        }
         footer {
             position: relative;
             z-index: 100;
+            margin-top: auto;
         }
         .about-project, .project-about, .about, #about {
             position: relative;
@@ -77,7 +87,7 @@
 <body class="font-sans antialiased">
 <div class="ornament-left"></div>
 <div class="ornament-right"></div>
-<div class="min-h-screen content-container">
+<div class="content-container">
     <!-- Navigation -->
     <nav class="site-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,22 +102,22 @@
                         <a href="{{ route('categories.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('categories.*') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Барлық санаттар
                         </a>
-                        <a href="{{ url('/traditions') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->path() == 'traditions' ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
+                        <a href="{{ route('categories.show', 'traditions') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->is('traditions') || request()->is('categories/traditions') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Салт-дәстүрлер
                         </a>
-                        <a href="{{ url('/games') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->path() == 'games' ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
+                        <a href="{{ route('categories.show', 'games') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->is('games') || request()->is('categories/games') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Ұлттық ойындар
                         </a>
-                        <a href="{{ url('/foods') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->path() == 'foods' ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
+                        <a href="{{ route('categories.show', 'foods') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->is('foods') || request()->is('categories/foods') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Ұлттық тағамдар
                         </a>
                         <a href="{{ url('/patterns') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->path() == 'patterns' ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Ою-өрнек
                         </a>
-                        <a href="{{ url('/holidays') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->path() == 'holidays' ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
+                        <a href="{{ route('categories.show', 'holidays') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->is('holidays') || request()->is('categories/holidays') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Ұлттық мерекелер
                         </a>
-                        <a href="{{ url('/figures') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->path() == 'figures' ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
+                        <a href="{{ route('categories.show', 'figures') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->is('figures') || request()->is('categories/figures') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
                             Тұлғалар мен тарих
                         </a>
                     </div>

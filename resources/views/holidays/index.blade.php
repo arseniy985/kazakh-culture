@@ -40,9 +40,16 @@
             <!-- Қосымша түсініктеме -->
             <div class="mt-16 max-w-3xl mx-auto text-center">
                 <h3 class="text-3xl font-semibold text-yellow-400">Мерекелердің тәрбиелік мәні</h3>
-                <p class="text-lg text-gray-200 mt-4">
-                    Ұлттық мерекелер — жастарды елін, жерін сүюге, бірлік пен ынтымаққа, рухани байлыққа тәрбиелейтін маңызды күндер.
+                <p class="text-lg text-gray-200 mt-4 leading-relaxed">
+                    Мерекелер арқылы тарих, таным мен бірлік сақталады.
                 </p>
+            </div>
+            
+            <!-- Кнопка Артқа -->
+            <div class="mt-10 text-center">
+                <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                    Артқа
+                </a>
             </div>
         </div>
     </section>

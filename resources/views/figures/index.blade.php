@@ -50,6 +50,17 @@
                     болашаққа сеніммен қарай алады.
                 </p>
             </div>
+
+            <p class="text-lg text-gray-300 mt-4 max-w-4xl mx-auto leading-relaxed">
+                Ұлы тұлғалар елінің рухын көтеріп, мәдениетін байытты. Олардың еңбегі ұрпақтан-ұрпаққа жалғасуда.
+            </p>
+
+            <!-- Кнопка Артқа -->
+            <div class="mt-10 text-center">
+                <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                    Артқа
+                </a>
+            </div>
         </div>
     </section>
 @endsection

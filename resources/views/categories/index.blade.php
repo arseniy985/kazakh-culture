@@ -26,6 +26,13 @@
                 </a>
             @endforeach
         </div>
+        
+        <!-- Кнопка Артқа -->
+        <div class="mt-10 text-center">
+            <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                Артқа
+            </a>
+        </div>
     </div>
 </section>
 @endsection 

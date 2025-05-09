@@ -55,7 +55,7 @@
             <p class="text-white text-lg leading-relaxed">
                 Жасанды интеллект көмегімен жасалған бұл жоба дәстүрлерді зерттеу мен үйренуді оңайлатуды көздейді.
             </p>
-            <a href="#categories" class="mt-6 inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg transition duration-300 shadow-md">
+            <a href="{{ route('categories.index') }}" class="mt-6 inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg transition duration-300 shadow-md">
                 Барлық санаттар
             </a>
         </div>

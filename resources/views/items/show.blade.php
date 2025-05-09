@@ -33,6 +33,9 @@
             <a href="{{ route('categories.show', $category->slug) }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
                 ← {{ $category->title }} санатына оралу
             </a>
+            <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                Артқа
+            </a>
         </div>
     </div>
 </section>

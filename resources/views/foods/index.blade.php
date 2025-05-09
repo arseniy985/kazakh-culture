@@ -36,9 +36,13 @@
                     </div>
                 </a>
             </div>
+            
+            <!-- Кнопка Артқа -->
+            <div class="mt-10 text-center">
+                <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                    Артқа
+                </a>
+            </div>
         </div>
-        <a href="{{ url('/#foods') }}" class="inline-block mt-6 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300 transition">
-            ← Артқа
-        </a>
     </section>
 @endsection

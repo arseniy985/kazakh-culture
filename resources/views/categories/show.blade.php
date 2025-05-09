@@ -36,6 +36,9 @@
             <a href="{{ route('categories.index') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
                 ← Барлық санаттарға оралу
             </a>
+            <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500 ml-4">
+                Артқа
+            </a>
         </div>
     </div>
 </section>

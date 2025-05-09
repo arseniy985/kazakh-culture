@@ -40,9 +40,16 @@
             <!-- Қосымша түсініктеме -->
             <div class="mt-16 max-w-3xl mx-auto text-center">
                 <h3 class="text-3xl font-semibold text-yellow-400">Ұлттық ойындардың маңызы</h3>
-                <p class="text-lg text-gray-200 mt-4">
-                    Бұл ойындар тек көңіл көтеру құралы емес, сонымен қатар жастарды шынықтыруға, ептілікке, зерделікке және отансүйгіштікке тәрбиелеудің тиімді жолы.
+                <p class="text-lg text-gray-200 mt-4 leading-relaxed">
+                    Ұлттық ойындар халық даналығының, мәдениетінің және тәрбие саласының маңызды бөлігі. Оларды үйрену мен сақтау келешек ұрпаққа үлкен мұра қалдыру болып табылады.
                 </p>
+            </div>
+            
+            <!-- Кнопка Артқа -->
+            <div class="mt-10 text-center">
+                <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                    Артқа
+                </a>
             </div>
         </div>
     </section>

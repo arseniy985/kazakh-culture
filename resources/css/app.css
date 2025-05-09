@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Стили для Markdown контента через Tailwind Typography */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    color: #f0c351; /* Желтый цвет для заголовков */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.prose h1 {
+    font-size: 1.8em;
+}
+
+.prose h2 {
+    font-size: 1.5em;
+}
+
+.prose h3 {
+    font-size: 1.3em;
+}
+
+.prose p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose ul, .prose ol {
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose ul {
+    list-style-type: disc;
+}
+
+.prose ol {
+    list-style-type: decimal;
+}
+
+.prose a {
+    color: #7dd3fc; /* Светло-голубой для ссылок */
+    text-decoration: underline;
+}
+
+.prose a:hover {
+    color: #38bdf8;
+}
+
+.prose blockquote {
+    border-left: 4px solid #f0c351; /* Желтый цвет для цитат */
+    padding-left: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    color: #d1d5db; /* Светло-серый для цитат */
+}
+
+.prose code {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.prose pre {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    border-radius: 0.5em;
+    overflow-x: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+/* Инвертированная цветовая схема для темного фона */
+.prose-invert h1, .prose-invert h2, .prose-invert h3, 
+.prose-invert h4, .prose-invert h5, .prose-invert h6 {
+    color: #f0c351;
+}
+
+.prose-invert a {
+    color: #7dd3fc;
+}
+
+.prose-invert a:hover {
+    color: #38bdf8;
+}
+
+.prose-invert blockquote {
+    border-left-color: #f0c351;
+    color: #d1d5db;
+}
+
+/* Меньший размер текста для виджета чата */
+.prose-xs {
+    font-size: 0.875rem;
+}
+
+.prose-sm {
+    font-size: 0.925rem;
+}

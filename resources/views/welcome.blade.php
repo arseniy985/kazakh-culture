@@ -1,99 +1,6 @@
-{{--@extends('layouts.app')--}}
-
-{{--@section('content')--}}
-
-{{--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">--}}
-
-{{--<!DOCTYPE html>--}}
-{{--    <html lang="kz">--}}
-{{--    <head>--}}
-{{--        <meta charset="UTF-8">--}}
-{{--        <meta name="viewport" content="width=device-width, initial-scale=1.0">--}}
-{{--        <title>Kazakh Culture</title>--}}
-{{--        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">--}}
-{{--    </head>--}}
-{{--    <body class="font-sans bg-gray-100">--}}
-
-{{--    <!-- Header Section -->--}}
-{{--    <header class="bg-blue-600 text-white py-4 shadow-md">--}}
-{{--        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">--}}
-{{--            <h1 class="text-3xl font-bold">Kazakh Culture</h1>--}}
-{{--            <nav class="flex space-x-6">--}}
-{{--                <a href="#traditions" class="text-lg">Салт-дәстүрлер</a>--}}
-{{--                <a href="#games" class="text-lg">Ұлттық ойындар</a>--}}
-{{--                <a href="#foods" class="text-lg">Ұлттық тағамдар</a>--}}
-{{--                <a href="#patterns" class="text-lg">Ою-өрнек</a>--}}
-{{--                <a href="#holidays" class="text-lg">Ұлттық мерекелер</a>--}}
-{{--                <a href="#figures" class="text-lg">Тұлғалар мен тарих</a>--}}
-{{--                <a href="#chatbot" class="text-lg">Чат-бот</a>--}}
-{{--            </nav>--}}
-{{--        </div>--}}
-{{--    </header>--}}
-
-{{--    <!-- Main Content -->--}}
-{{--    <main class="py-10">--}}
-{{--        <div class="max-w-7xl mx-auto px-4">--}}
-{{--            <!-- Салт-дәстүрлер -->--}}
-{{--            <section id="traditions" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Салт-дәстүрлер</h2>--}}
-{{--                <p class="mt-4">Қазақ халқының салт-дәстүрлері мен ұлттық мерекелері туралы мәлімет.</p>--}}
-{{--                <a href="/traditions" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-
-{{--            <!-- Ұлттық ойындар -->--}}
-{{--            <section id="games" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Ұлттық ойындар</h2>--}}
-{{--                <p class="mt-4">Қазақ ұлттық ойындары мен олардың маңызы.</p>--}}
-{{--                <a href="/games" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-
-{{--            <!-- Ұлттық тағамдар -->--}}
-{{--            <section id="foods" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Ұлттық тағамдар</h2>--}}
-{{--                <p class="mt-4">Қазақтың ұлттық тағамдары мен олардың дайындау әдістері.</p>--}}
-{{--                <a href="/foods" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-
-{{--            <!-- Ою-өрнек -->--}}
-{{--            <section id="patterns" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Ою-өрнек және қолөнер</h2>--}}
-{{--                <p class="mt-4">Қазақтың қолөнерін және ою-өрнектерінің тарихын зерттеу.</p>--}}
-{{--                <a href="/patterns" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-
-{{--            <!-- Ұлттық мерекелер -->--}}
-{{--            <section id="holidays" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Ұлттық мерекелер</h2>--}}
-{{--                <p class="mt-4">Наурыз, Құрбан айт, және басқа мерекелер туралы мәлімет.</p>--}}
-{{--                <a href="/holidays" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-
-{{--            <!-- Тұлғалар мен тарих -->--}}
-{{--            <section id="figures" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Тұлғалар мен тарих</h2>--}}
-{{--                <p class="mt-4">Қазақтың ұлы тұлғалары мен олардың тарихы.</p>--}}
-{{--                <a href="/figures" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-
-{{--            <!-- Чат-бот -->--}}
-{{--            <section id="chatbot" class="bg-white rounded-lg shadow-lg p-6 mb-6">--}}
-{{--                <h2 class="text-2xl font-semibold">Чат-бот</h2>--}}
-{{--                <p class="mt-4">Қазақ мәдениеті туралы сұрақтарға чат-бот жауап береді.</p>--}}
-{{--                <a href="/chatbot" class="text-blue-500 mt-4 inline-block">Толығырақ</a>--}}
-{{--            </section>--}}
-{{--        </div>--}}
-{{--    </main>--}}
-
-{{--    </body>--}}
-{{--    </html>--}}
-
-{{--@endsection--}}
 @extends('layouts.app')
 
 @section('content')
-
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
-
     <!DOCTYPE html>
     <html lang="kz">
     <head>
@@ -133,7 +40,7 @@
 {{--    <div class="relative z-10 flex justify-center items-center w-full h-full">--}}
 {{--        <div class="text-center text-white px-4">--}}
 {{--            <h1 class="text-4xl font-bold">Добро пожаловать в Казахстан</h1>--}}
-{{--            <p class="mt-4 text-lg">Исследуйте богатое наследие и культуру казахского народа</p>--}}
+{{--            <p class="mt-4 text-lg">Исследуйте богатое наследие и культуру казахского народа</p>
 {{--            <a href="#traditions" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-lg">Вперёд</a>--}}
 {{--        </div>--}}
 {{--    </div>--}}
@@ -153,237 +60,181 @@
             <p class="text-white text-lg leading-relaxed">
                 Жасанды интеллект көмегімен жасалған бұл жоба дәстүрлерді зерттеу мен үйренуді оңайлатуды көздейді.
             </p>
-            <a href="#traditions" class="mt-6 inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg transition duration-300 shadow-md">
-                Вперёд
+            <a href="#categories" class="mt-6 inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg transition duration-300 shadow-md">
+                Барлық санаттар
             </a>
         </div>
     </div>
 </section>
 
-
-
-
-
-
-
-
+<div class="fixed bottom-6 left-6 z-50">
+    <button id="startButton" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+        Бастау
+    </button>
+    
+    <!-- Аудио-плеер -->
+    <div id="audioPlayer" class="hidden mt-4 bg-black bg-opacity-70 rounded-lg p-3 text-white shadow-xl">
+        <div class="flex items-center align-center justify-center">
+            <div class="mr-2 flex items-center align-center justify-center">
+                <button id="playPauseButton" class="text-white focus:outline-none">
+                    <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="text-sm font-medium">Қазақ музыкасы</div>
+        </div>
+        
+        <audio id="audioElement" src="{{ asset('audio/music.mp3') }}"></audio>
+    </div>
+</div>
 
     <!-- Main Content -->
     <main class="py-10">
         <div class="max-w-7xl mx-auto px-4">
+            
+            <!-- Категории -->
+            <section id="categories" class="w-full bg-gray-100 py-12 px-6">
+                <h2 class="text-4xl font-bold text-center text-blue-600">Барлық санаттар</h2>
+                <p class="text-center text-lg mt-2 text-gray-700">
+                    Қазақ мәдениетіне қатысты барлық санаттар біздің сайтта.
+                </p>
+
+                <div class="mt-8 text-center">
+                    <a href="{{ route('categories.index') }}" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition">
+                        Барлық санаттарды көру
+                    </a>
+                </div>
+            </section>
+            
+            @php
+                $traditionsCategory = \App\Models\Category::where('slug', 'traditions')->first();
+                $traditions = $traditionsCategory ? $traditionsCategory->items()->limit(3)->get() : collect();
+            @endphp
+            
             <!-- Салт-дәстүрлер -->
+            @if($traditionsCategory)
                 <section id="traditions" class="w-full min-h-screen bg-gray-100 py-12 px-6">
-                    <h2 class="text-4xl font-bold text-center text-blue-600">Салт-дәстүрлер</h2>
+                    <h2 class="text-4xl font-bold text-center text-blue-600">{{ $traditionsCategory->title }}</h2>
                     <p class="text-center text-lg mt-2 text-gray-700">
-                        Қазақ халқының маңызды салт-дәстүрлерімен танысыңыз.
+                        {{ $traditionsCategory->description }}
                     </p>
 
                     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                        <!-- Бесікке салу -->
-                        <a href="{{ url('/traditions/besikke-salu') }}" class="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                            <img src="{{ asset('images/besikke.jpg') }}" alt="Бесікке салу" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-semibold text-gray-800">Бесікке салу</h3>
-                                <p class="text-gray-600 mt-2">Сәбиді бесікке бөлеу — тәрбиелік мәні терең салт.</p>
-                            </div>
+                        @foreach($traditions as $item)
+                            <a href="{{ route('items.show', [$traditionsCategory->slug, $item->slug]) }}" class="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                                @if($item->image)
+                                    <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-56 object-cover">
+                                @endif
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-semibold text-gray-800">{{ $item->title }}</h3>
+                                    <p class="text-gray-600 mt-2">{{ Str::limit(strip_tags($item->content), 100) }}</p>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
+                    
+                    <div class="text-center mt-8">
+                        <a href="{{ route('categories.show', $traditionsCategory->slug) }}" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition">
+                            Толығырақ
                         </a>
+            @endif
 
-                        <!-- Тұсаукесер -->
-                        <a href="{{ url('/traditions/tusaukeser') }}" class="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                            <img src="{{ asset('images/tusaukeser.jpg') }}" alt="Тұсаукесер" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-semibold text-gray-800">Тұсаукесер</h3>
-                                <p class="text-gray-600 mt-2">Сәбидің алғашқы қадамы – қуаныш пен тілекке толы дәстүр.</p>
-                            </div>
-                        </a>
+            @php
+                $gamesCategory = \App\Models\Category::where('slug', 'games')->first();
+                $games = $gamesCategory ? $gamesCategory->items()->limit(3)->get() : collect();
+            @endphp
+            
+            <!-- Ұлттық ойындар -->
+            @if($gamesCategory)
+                <section id="games" class="w-full min-h-screen bg-[#3b1f1f] py-16 px-6 text-white">
+                    <div class="max-w-7xl mx-auto">
+                        <h2 class="text-4xl font-extrabold text-yellow-400 text-center">{{ $gamesCategory->title }}</h2>
+                        <p class="text-center text-lg mt-4 text-gray-300">
+                            {{ $gamesCategory->description }}
+                        </p>
 
-                        <!-- Қыз ұзату -->
-                        <a href="{{ url('/traditions/qyz-uzatu') }}" class="block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                            <img src="{{ asset('images/qyz-uzatu.jpg') }}" alt="Қыз ұзату" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-semibold text-gray-800">Қыз ұзату</h3>
-                                <p class="text-gray-600 mt-2">Қыз ұзату – үлкен құрметке ие, салттық шара.</p>
-                            </div>
-                        </a>
+                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            @foreach($games as $item)
+                                <a href="{{ route('items.show', [$gamesCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                                    @if($item->image)
+                                        <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-56 object-cover">
+                                    @endif
+                                    <div class="p-6 text-gray-800">
+                                        <h3 class="text-2xl font-bold mb-2">{{ $item->title }}</h3>
+                                        <p>{{ Str::limit(strip_tags($item->content), 100) }}</p>
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
+
+                        <div class="text-center mt-10">
+                            <a href="{{ route('categories.show', $gamesCategory->slug) }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300">
+                                Барлық ойындарды көру
+                            </a>
+                        </div>
                     </div>
                 </section>
+            @endif
 
-
-
-
-            <!-- Ұлттық ойындар -->
-            <!-- Ұлттық ойындар -->
-            <section id="games" class="w-full min-h-screen bg-[#3b1f1f] py-16 px-6 text-white">
-                <div class="max-w-7xl mx-auto">
-                    <h2 class="text-4xl font-extrabold text-yellow-400 text-center">Ұлттық ойындар</h2>
-                    <p class="text-center text-lg mt-4 text-gray-300">
-                        Қазақ ұлттық ойындары – жастарды тәрбиелеудің, шынықтырудың, ерлікке баулудың тамаша үлгісі.
-                    </p>
-
-                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Көкпар -->
-                        <a href="/games/kokpar" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <img src="{{ asset('images/kokpar.jpg') }}" alt="Көкпар" class="w-full h-56 object-cover">
-                            <div class="p-6 text-gray-800">
-                                <h3 class="text-2xl font-bold mb-2">Көкпар</h3>
-                                <p>Ер жігіттің ептілігі мен батырлығын сынайтын шабандоздар ойыны.</p>
-                            </div>
-                        </a>
-
-                        <!-- Асық ату -->
-                        <a href="/games/asyk" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <img src="{{ asset('images/asyk.jpg') }}" alt="Асық ату" class="w-full h-56 object-cover">
-                            <div class="p-6 text-gray-800">
-                                <h3 class="text-2xl font-bold mb-2">Асық ату</h3>
-                                <p>Балалар арасында кең тараған дәлдік пен шапшаңдықты талап ететін ойын.</p>
-                            </div>
-                        </a>
-
-                        <!-- Тоғызқұмалақ -->
-                        <a href="/games/togyzkumalak" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <img src="{{ asset('images/togyzkumalak.jpg') }}" alt="Тоғызқұмалақ" class="w-full h-56 object-cover">
-                            <div class="p-6 text-gray-800">
-                                <h3 class="text-2xl font-bold mb-2">Тоғызқұмалақ</h3>
-                                <p>Логикалық ойлау қабілетін арттыратын зияткерлік ойын.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="text-center mt-10">
-                        <a href="/games" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Толығырақ</a>
-                    </div>
-                </div>
-            </section>
-
-
+            @php
+                $foodsCategory = \App\Models\Category::where('slug', 'foods')->first();
+                $foods = $foodsCategory ? $foodsCategory->items()->limit(3)->get() : collect();
+            @endphp
+            
             <!-- Ұлттық тағамдар -->
-            <!-- Ұлттық тағамдар -->
-            <section id="foods" class="py-16 bg-[#3b1f1f] text-white">
-                <div class="max-w-7xl mx-auto px-4">
-                    <h2 class="text-4xl font-extrabold text-yellow-400 text-center">Ұлттық тағамдар</h2>
-                    <p class="text-center text-lg mt-4 text-gray-300">
-                        Қазақтың ұлттық тағамдары – дәстүр мен дәмнің үйлесімі.
-                    </p>
+            @if($foodsCategory)
+                <section id="foods" class="py-16 bg-[#3b1f1f] text-white">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <h2 class="text-4xl font-extrabold text-yellow-400 text-center">{{ $foodsCategory->title }}</h2>
+                        <p class="text-center text-lg mt-4 text-gray-300">
+                            {{ $foodsCategory->description }}
+                        </p>
 
-                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Бесбармақ -->
-                        <a href="/foods/besbarmak" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <img src="{{ asset('images/besbarmak.jpg') }}" alt="Бесбармақ" class="w-full h-56 object-cover">
-                            <div class="p-6 text-gray-800">
-                                <h3 class="text-2xl font-bold mb-2">Бесбармақ</h3>
-                                <p>Қазақтың басты әрі ең танымал ұлттық тағамы.</p>
-                            </div>
-                        </a>
+                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            @foreach($foods as $item)
+                                <a href="{{ route('items.show', [$foodsCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                                    @if($item->image)
+                                        <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-56 object-cover">
+                                    @endif
+                                    <div class="p-6 text-gray-800">
+                                        <h3 class="text-2xl font-bold mb-2">{{ $item->title }}</h3>
+                                        <p>{{ Str::limit(strip_tags($item->content), 100) }}</p>
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
 
-                        <!-- Қуырдақ -->
-                        <a href="/foods/kuyrdak" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <img src="{{ asset('images/kuyrdak.jpg') }}" alt="Қуырдақ" class="w-full h-56 object-cover">
-                            <div class="p-6 text-gray-800">
-                                <h3 class="text-2xl font-bold mb-2">Қуырдақ</h3>
-                                <p>Ет пен өкпе-бауырдан жасалатын қуырылған тағам.</p>
-                            </div>
-                        </a>
-
-                        <!-- Қымыз -->
-                        <a href="/foods/qymyz" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                            <img src="{{ asset('images/qymyz.jpg') }}" alt="Қымыз" class="w-full h-56 object-cover">
-                            <div class="p-6 text-gray-800">
-                                <h3 class="text-2xl font-bold mb-2">Қымыз</h3>
-                                <p>Бие сүтінен ашытылып жасалатын дәруменге бай сусын.</p>
-                            </div>
-                        </a>
+                        <div class="text-center mt-8">
+                            <a href="{{ route('categories.show', $foodsCategory->slug) }}" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Толығырақ</a>
+                        </div>
                     </div>
+                </section>
+            @endif
 
-                    <div class="text-center mt-8">
-                        <a href="/foods" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Толығырақ</a>
-                    </div>
-                </div>
-            </section>
-
-
+            @php
+                $patternsCategory = \App\Models\Category::where('slug', 'patterns')->first();
+            @endphp
+            
             <!-- Ою-өрнек -->
-            <section id="patterns" class="py-16 bg-[#3b1f1f] text-white">
-                <div class="max-w-7xl mx-auto px-4">
-                    <h2 class="text-4xl font-extrabold text-yellow-400 text-center mb-4">Ою-өрнек</h2>
-                    <p class="text-center text-lg text-gray-300 mb-10">
-                        Қазақ халқының ою-өрнектері — ұлттық өнер мен мәдениеттің айнасы. Әрбір ою — терең мағына мен тарихты бейнелейді.
-                    </p>
+            @if($patternsCategory)
+                <section id="patterns" class="py-16 bg-[#3b1f1f] text-white">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <h2 class="text-4xl font-extrabold text-yellow-400 text-center mb-4">{{ $patternsCategory->title }}</h2>
+                        <p class="text-center text-lg text-gray-300 mb-10">
+                            {{ $patternsCategory->description }}
+                        </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        <!-- Ою 1 -->
-                        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-                            <!-- Сурет пен мәтіннің үстінен басқанда жаңа бетке өтеді -->
-                            <a href="{{ url('/patterns/qoshqar-muyiz') }}">
-                                <img src="{{ asset('images/oyu1.jpg') }}" alt="Қошқар мүйіз"
-                                     class="w-full h-64 object-contain bg-white">
-                                <div class="p-4 text-gray-800 text-center">
-                                    <h3 class="text-xl font-bold mb-2">Қошқар мүйіз</h3>
-                                    <p class="text-sm">Береке, байлық, молшылықтың белгісі.</p>
-                                </div>
-                            </a>
-
-                            <!-- QR-код арқылы жеке бетке өту -->
-                            <div class="text-center pb-4">
-                                <a href="{{ url('/patterns/qoshqar-muyiz') }}" target="_blank">
-                                    <img src="{{ asset('images/qr-qoshqar.png') }}" alt="QR - Қошқар мүйіз"
-                                         class="w-16 mx-auto mt-2 hover:scale-110 transition">
-                                    <p class="text-xs text-gray-600 mt-1">QR арқылы ашу</p>
-                                </a>
-                            </div>
+                        <div class="text-center mt-8">
+                            <a href="{{ route('categories.show', $patternsCategory->slug) }}" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Ою-өрнектерді көру</a>
                         </div>
-
-
-                        <!-- Ою 2 -->
-                        <!-- Ою 2 -->
-                        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-                            <!-- Басқанда жаңа бетке өтеді -->
-                            <a href="{{ url('/patterns/tuiye-taban') }}">
-                                <img src="{{ asset('images/oyu2.jpg') }}" alt="Түйе табан"
-                                     class="w-full h-64 object-contain bg-white">
-                                <div class="p-4 text-gray-800 text-center">
-                                    <h3 class="text-xl font-bold mb-2">Түйе табан</h3>
-                                    <p class="text-sm">Күш пен төзімділіктің символы.</p>
-                                </div>
-                            </a>
-
-                            <!-- QR-код арқылы кіру -->
-                            <div class="text-center pb-4">
-                                <a href="{{ url('/patterns/tuiye-taban') }}" target="_blank">
-                                    <img src="{{ asset('images/qr-tuiye.png') }}" alt="QR - Түйе табан"
-                                         class="w-16 mx-auto mt-2 hover:scale-110 transition">
-                                    <p class="text-xs text-gray-600 mt-1">QR арқылы ашу</p>
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <!-- Ою 3 -->
-                        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-                            <!-- Басқанда жаңа бетке өтеді -->
-                            <a href="{{ url('/patterns/qos-alqa') }}">
-                                <img src="{{ asset('images/oyu3.jpg') }}" alt="Қос алқа"
-                                     class="w-full h-64 object-contain bg-white">
-                                <div class="p-4 text-gray-800 text-center">
-                                    <h3 class="text-xl font-bold mb-2">Қос алқа</h3>
-                                    <p class="text-sm">Бірлік пен үйлесімділік белгісі.</p>
-                                </div>
-                            </a>
-
-                            <!-- QR-код арқылы кіру -->
-                            <div class="text-center pb-4">
-                                <a href="{{ url('/patterns/qos-alqa') }}" target="_blank">
-                                    <img src="{{ asset('images/qr-qosalka.png') }}" alt="QR - Қос алқа"
-                                         class="w-16 mx-auto mt-2 hover:scale-110 transition">
-                                    <p class="text-xs text-gray-600 mt-1">QR арқылы ашу</p>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
-            </section>
-
+                </section>
+            @endif
 
             <!-- Ұлттық мерекелер -->
             <section id="holidays" class="py-16 bg-[#3b1f1f] text-white">
@@ -477,6 +328,33 @@
         </div>
     </main>
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const startButton = document.getElementById('startButton');
+            const audioPlayer = document.getElementById('audioPlayer');
+            const audioElement = document.getElementById('audioElement');
+            const playPauseButton = document.getElementById('playPauseButton');
+            const playIcon = document.getElementById('playIcon');
+            const pauseIcon = document.getElementById('pauseIcon');
+            
+            startButton.addEventListener('click', function() {
+                audioPlayer.classList.remove('hidden');
+                audioElement.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            });
+            
+            playPauseButton.addEventListener('click', function() {
+                if (audioElement.paused) {
+                    audioElement.play();
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                } else {
+                    audioElement.pause();
+                    pauseIcon.classList.add('hidden');
+                    playIcon.classList.remove('hidden');
+                }
+            });
+        });
     function openModal(title, description, image) {
         document.getElementById('modalTitle').innerText = title;
         document.getElementById('modalDescription').innerText = description;
@@ -489,6 +367,7 @@
         document.getElementById('patternModal').classList.remove('flex');
         document.getElementById('patternModal').classList.add('hidden');
     }
+    
 </script>
 
     </body>

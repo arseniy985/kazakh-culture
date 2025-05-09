@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,6 +20,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Маршруты для категорий и записей
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/{slug}', [CategoryController::class, 'show'])->name('categories.show');
+Route::get('/categories/{categorySlug}/{itemSlug}', [ItemController::class, 'show'])->name('items.show');
+
+// Старые маршруты сохраняем для совместимости
 Route::get('/holidays', function () {
     return view('holidays.index');
 });
@@ -105,6 +113,8 @@ Route::get('/figures/alikhan', function () {
     return view('figures.alikhan');
 });
 
-
+// Чат-бот
+Route::get('/chatbot', [App\Http\Controllers\ChatbotController::class, 'index'])->name('chatbot.index');
+Route::post('/chatbot/query', [App\Http\Controllers\ChatbotController::class, 'query'])->name('chatbot.query');
 
 require __DIR__.'/auth.php';

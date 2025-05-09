@@ -5,7 +5,9 @@
         <div class="max-w-3xl mx-auto text-center">
             <h1 class="text-3xl sm:text-4xl font-bold text-yellow-400 mb-8">Қыз ұзату</h1>
 
-            <img src="{{ asset('images/qyz-uzatu.jpg') }}" alt="Қыз ұзату" class="w-full max-h-[500px] object-cover rounded-lg shadow-md mb-8">
+            <div class="w-full max-w-full overflow-hidden rounded-lg shadow-md mb-8">
+                <img src="{{ asset('images/qyz-uzatu.jpg') }}" alt="Қыз ұзату" class="w-full max-h-[500px] object-contain mx-auto">
+            </div>
 
             <p class="text-lg leading-relaxed mb-6">
                 Қыз ұзату — қазақ халқындағы маңызды дәстүрдің бірі. Бұл рәсім қыз баланы өз отбасынан шығарып, басқа әулетке аманаттап тапсыруды білдіреді.

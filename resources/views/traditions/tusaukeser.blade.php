@@ -5,7 +5,9 @@
         <div class="max-w-3xl mx-auto text-center">
             <h1 class="text-3xl sm:text-4xl font-bold text-yellow-400 mb-8">Тұсаукесер</h1>
 
-            <img src="{{ asset('images/tusaukeser.jpg') }}" alt="Тұсаукесер" class="w-full max-h-[500px] object-cover rounded-lg shadow-md mb-8">
+            <div class="w-full max-w-full overflow-hidden rounded-lg shadow-md mb-8">
+                <img src="{{ asset('images/tusaukeser.jpg') }}" alt="Тұсаукесер" class="w-full max-h-[500px] object-contain mx-auto">
+            </div>
 
             <p class="text-lg leading-relaxed mb-6">
                 Тұсаукесер — баланың алғашқы қадамына арналған дәстүр. Бұл сәтте бала жүре бастаған кезде, оның тұсауын кесу арқылы жақсы ниет, тілек білдіріледі.

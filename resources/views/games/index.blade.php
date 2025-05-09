@@ -11,7 +11,9 @@
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Көкпар -->
                 <a href="/games/kokpar" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <img src="{{ asset('images/kokpar.jpg') }}" alt="Көкпар" class="w-full h-56 object-cover">
+                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                        <img src="{{ asset('images/kokpar.jpg') }}" alt="Көкпар" class="w-full h-full object-contain mx-auto">
+                    </div>
                     <div class="p-6 text-gray-800">
                         <h3 class="text-2xl font-bold mb-2">Көкпар</h3>
                         <p>Көкпар — ат үстіндегі шапшаңдықты, батырлықты және командалық рухты талап ететін ұлттық ат ойыны.</p>
@@ -20,19 +22,23 @@
 
                 <!-- Асық ату -->
                 <a href="/games/asyk" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <img src="{{ asset('images/asyk.jpg') }}" alt="Асық ату" class="w-full h-56 object-cover">
+                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                        <img src="{{ asset('images/asyk.jpg') }}" alt="Асық ату" class="w-full h-full object-contain mx-auto">
+                    </div>
                     <div class="p-6 text-gray-800">
                         <h3 class="text-2xl font-bold mb-2">Асық ату</h3>
-                        <p>Асық — қазақ балаларының дәлдікке, шапшаңдыққа және төзімділікке үйрететін ертеден келе жатқан ойыны.</p>
+                        <p>Асық ату — балалар арасында кең тараған шапшаңдықты және дәлдікті талап ететін ойын.</p>
                     </div>
                 </a>
 
                 <!-- Тоғызқұмалақ -->
                 <a href="/games/togyzkumalak" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <img src="{{ asset('images/togyzkumalak.jpg') }}" alt="Тоғызқұмалақ" class="w-full h-56 object-cover">
+                    <div class="w-full aspect-[2/1] relative overflow-hidden">
+                        <img src="{{ asset('images/togyzkumalak.jpg') }}" alt="Тоғызқұмалақ" class="w-full h-full object-contain mx-auto">
+                    </div>
                     <div class="p-6 text-gray-800">
                         <h3 class="text-2xl font-bold mb-2">Тоғызқұмалақ</h3>
-                        <p>Тоғызқұмалақ — логикалық және стратегиялық ойлауды дамытатын ұлттық зияткерлік ойын.</p>
+                        <p>Тоғызқұмалақ — қазақтың ұлттық логикалық ойыны, "дала шахматы" деп те аталады.</p>
                     </div>
                 </a>
             </div>

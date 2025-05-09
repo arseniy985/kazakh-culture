@@ -13,9 +13,11 @@
             @foreach($categories as $category)
                 <a href="{{ route('categories.show', $category->slug) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                     @if($category->image)
-                        <img src="{{ $category->image_url }}" alt="{{ $category->title }}" class="w-full h-[300px] object-cover">
+                        <div class="w-full aspect-[2/1] relative overflow-hidden">
+                            <img src="{{ $category->image_url }}" alt="{{ $category->title }}" class="w-full h-full object-contain mx-auto">
+                        </div>
                     @else
-                        <div class="w-full h-[300px] bg-gray-200 flex items-center justify-center">
+                        <div class="w-full aspect-[2/1] bg-gray-200 flex items-center justify-center">
                             <span class="text-gray-400 text-2xl">Сурет жоқ</span>
                         </div>
                     @endif

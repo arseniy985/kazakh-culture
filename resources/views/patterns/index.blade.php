@@ -74,6 +74,12 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        div.overflow-hidden {
+            z-index: 10;
+        }
+    </style>
+
     <section class="w-full min-h-screen bg-[#3b1f1f] py-16 px-6 text-white">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-extrabold text-yellow-400 text-center">Ою-өрнектер</h2>
@@ -142,7 +148,7 @@
                 </p>
             </div>
         </div>
-        
+
         <!-- Кнопка Артқа -->
         <div class="mt-10 text-center">
             <a href="{{ url('/') }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">

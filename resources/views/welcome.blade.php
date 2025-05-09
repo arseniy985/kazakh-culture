@@ -199,6 +199,7 @@
 
             @php
                 $patternsCategory = \App\Models\Category::where('slug', 'patterns')->first();
+                $patterns = $patternsCategory ? $patternsCategory->items()->limit(3)->get() : collect();
             @endphp
             
             <!-- Ою-өрнек -->
@@ -209,6 +210,24 @@
                         <p class="text-center text-lg text-gray-300 mb-10">
                             {{ $patternsCategory->description }}
                         </p>
+
+                        @if($patterns->count() > 0)
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                                @foreach($patterns as $pattern)
+                                    <a href="{{ route('items.show', ['categorySlug' => $patternsCategory->slug, 'itemSlug' => $pattern->slug]) }}" class="bg-[#2a1717] rounded-lg overflow-hidden hover:bg-[#3c2424] transition">
+                                        <div class="h-[200px] min-h-[150px] max-h-[300px] w-full">
+                                            <img src="{{ $pattern->image_url }}" alt="{{ $pattern->title }}" class="w-full h-full object-contain">
+                                        </div>
+                                        <div class="p-6">
+                                            <h3 class="text-xl font-bold text-yellow-400 mb-2">{{ $pattern->title }}</h3>
+                                            <p class="text-gray-400 line-clamp-3">
+                                                {{ strip_tags(Str::limit($pattern->content, 150)) }}
+                                            </p>
+                                        </div>
+                                    </a>
+                                @endforeach
+                            </div>
+                        @endif
 
                         <div class="text-center mt-8">
                             <a href="{{ route('categories.show', $patternsCategory->slug) }}" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Ою-өрнектерді көру</a>

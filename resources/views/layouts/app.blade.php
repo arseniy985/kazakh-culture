@@ -17,7 +17,11 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
     <style>
+        a.block {
+        z-index: 10 !important;
+    }
         body {
+            
             background-color: #3b1f1f;
             position: relative;
         }

@@ -2,6 +2,13 @@
 
 @section('content')
 
+<style>
+    #about {
+        z-index: 11 !important;
+    }
+    
+</style>
+
 {{--    <!-- Background Image Section -->--}}
 {{--    <section class="relative w-full h-[80vh] bg-cover bg-center" style="background-image: url('/images/salt-dastur.jpg');">--}}
 {{--        <div class="absolute inset-0 bg-black opacity-50"></div>--}}

@@ -12,14 +12,51 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="{{ asset('js/app.js') }}" defer></script>
-        
-        <script src="https://cdn.tailwindcss.com"></script>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <style>
+            body {
+                background-color: #3b1f1f;
+                position: relative;
+                min-height: 100vh;
+            }
+            .ornament-left {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 200px;
+                background-image: url('{{ asset('images/erasebg-transformed.png') }}');
+                background-repeat: repeat-y;
+                opacity: 0.3;
+                pointer-events: none;
+            }
+            .ornament-right {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 200px;
+                background-image: url('{{ asset('images/erasebg-transformed.png') }}');
+                background-repeat: repeat-y;
+                opacity: 0.3;
+                pointer-events: none;
+                transform: scaleX(-1);
+            }
+            .content-container {
+                position: relative;
+                z-index: 100;
+            }
+            .w-full {
+                position: relative;
+                z-index: 100;
+            }
+        </style>
     </head>
     <body class="font-sans text-gray-200 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-[#3b1f1f] bg-gradient-to-b from-[#3b1f1f] to-[#2a1515]">
+        <div class="ornament-left"></div>
+        <div class="ornament-right"></div>
+        <div class="content-container min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-[#3b1f1f] bg-gradient-to-b from-[#3b1f1f] to-[#2a1515]">
             <div class="mb-4">
                 <a href="/" class="flex flex-col items-center">
                     <span class="text-2xl font-bold text-yellow-400">Қазақ дәстүрлері</span>

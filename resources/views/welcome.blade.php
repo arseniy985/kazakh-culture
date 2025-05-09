@@ -1,15 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <!DOCTYPE html>
-    <html lang="kz">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kazakh Culture</title>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
-    </head>
-    <body class="font-sans bg-gray-100">
 
 {{--    <!-- Background Image Section -->--}}
 {{--    <section class="relative w-full h-[80vh] bg-cover bg-center" style="background-image: url('/images/salt-dastur.jpg');">--}}
@@ -28,10 +19,7 @@
 {{--    <div class="absolute inset-0 bg-black opacity-50"></div>--}}
 {{--    <div class="relative z-10 flex justify-center items-center w-full h-full">--}}
 {{--        <div class="text-center text-white px-4">--}}
-{{--            <h1 class="text-5xl font-bold">Добро пожаловать в Казахстан</h1>--}}
-{{--            <p class="mt-4 text-2xl">Исследуйте богатое наследие и культуру казахского народа</p>--}}
-{{--            <a href="#traditions" class="mt-6 inline-block px-8 py-4 bg-blue-600 text-white rounded-lg text-xl hover:bg-blue-500 transition duration-300">Вперёд</a>--}}
-{{--        </div>--}}
+{{--            <h1 class="text-5xl fonbg-[#3b1f1f]
 {{--    </div>--}}
 {{--</section>--}}
 
@@ -46,7 +34,7 @@
 {{--    </div>--}}
 {{--</section>--}}
 
-<section id="about" class="relative w-full h-[85vh] bg-cover bg-center" style="background-image: url('/images/salt-dastur.jpg');">
+<section id="about" class="relative bg-[#3b1f1f] w-full h-[85vh] bg-cover bg-center" style="background-image: url('/images/salt-dastur.jpg');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
         <div class="bg-black bg-opacity-40 p-8 rounded-xl shadow-xl max-w-3xl">
@@ -97,20 +85,6 @@
     <main class="py-10">
         <div class="max-w-7xl mx-auto px-4">
             
-            <!-- Категории -->
-            <section id="categories" class="w-full bg-gray-100 py-12 px-6">
-                <h2 class="text-4xl font-bold text-center text-blue-600">Барлық санаттар</h2>
-                <p class="text-center text-lg mt-2 text-gray-700">
-                    Қазақ мәдениетіне қатысты барлық санаттар біздің сайтта.
-                </p>
-
-                <div class="mt-8 text-center">
-                    <a href="{{ route('categories.index') }}" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition">
-                        Барлық санаттарды көру
-                    </a>
-                </div>
-            </section>
-            
             @php
                 $traditionsCategory = \App\Models\Category::where('slug', 'traditions')->first();
                 $traditions = $traditionsCategory ? $traditionsCategory->items()->limit(3)->get() : collect();
@@ -118,9 +92,9 @@
             
             <!-- Салт-дәстүрлер -->
             @if($traditionsCategory)
-                <section id="traditions" class="w-full min-h-screen bg-gray-100 py-12 px-6">
+                <section id="traditions" class="w-full min-h-screen bg-[#3b1f1f] py-12 px-6">
                     <h2 class="text-4xl font-bold text-center text-blue-600">{{ $traditionsCategory->title }}</h2>
-                    <p class="text-center text-lg mt-2 text-gray-700">
+                    <p class="text-center text-lg mt-2 text-gray-100">
                         {{ $traditionsCategory->description }}
                     </p>
 
@@ -317,14 +291,6 @@
                     </div>
                 </div>
             </section>
-
-
-            <!-- Чат-бот -->
-            <section id="chatbot" class="bg-white rounded-lg shadow-lg p-6 mb-6">
-                <h2 class="text-2xl font-semibold">Чат-бот</h2>
-                <p class="mt-4">Қазақ мәдениеті туралы сұрақтарға чат-бот жауап береді.</p>
-                <a href="/chatbot" class="text-blue-500 mt-4 inline-block">Толығырақ</a>
-            </section>
         </div>
     </main>
 <script>
@@ -369,9 +335,6 @@
     }
     
 </script>
-
-    </body>
-    </html>
 
     <!-- Modal терезе -->
     <div id="patternModal" class="fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50">

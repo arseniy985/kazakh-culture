@@ -12,18 +12,70 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <style>
+        body {
+            background-color: #3b1f1f;
+            position: relative;
+        }
+        .ornament-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('{{ asset('images/erasebg-transformed.png') }}');
+            background-repeat: repeat-y;
+            opacity: 0.3;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .ornament-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('{{ asset('images/erasebg-transformed.png') }}');
+            background-repeat: repeat-y;
+            opacity: 0.3;
+            z-index: 1;
+            pointer-events: none;
+            transform: scaleX(-1);
+        }
+        .content-container {
+            position: relative;
+        }
+        .site-nav {
+            position: sticky; 
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        footer {
+            position: relative;
+            z-index: 100;
+        }
+        .about-project, .project-about, .about, #about {
+            position: relative;
+            z-index: 100;
+        }
+        main .container h1, main .container h2, main .container h3, main .container section {
+            position: relative;
+            z-index: 100;
+        }
+    </style>
 </head>
-<body class="font-sans antialiased bg-gray-100">
-<div class="min-h-screen">
+<body class="font-sans antialiased">
+<div class="ornament-left"></div>
+<div class="ornament-right"></div>
+<div class="min-h-screen content-container">
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-30">
+    <nav class="site-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
@@ -91,13 +143,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Page Content -->
-    <main>
+    <main class="bg-[#3b1f1f]">
         @yield('content')
     </main>
 

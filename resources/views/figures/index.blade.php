@@ -14,9 +14,7 @@
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Абай Құнанбайұлы -->
                 <a href="{{ url('/figures/abai') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                        <img src="{{ asset('images/abai.jpg') }}" alt="Абай Құнанбайұлы" class="w-full h-full object-contain mx-auto">
-                    </div>
+                    <img src="{{ asset('images/abai.jpg') }}" alt="Абай Құнанбайұлы" class="w-full h-[300px] object-cover">
                     <div class="p-6 text-gray-800">
                         <h3 class="text-2xl font-bold mb-2">Абай Құнанбайұлы</h3>
                         <p>Ұлы ақын, философ және ағартушы. Қазақ жазба әдебиетінің негізін қалаушы, халықты білім мен ғылымға үндеген ойшыл тұлға.</p>
@@ -25,9 +23,7 @@
 
                 <!-- Керей мен Жәнібек -->
                 <a href="{{ url('/figures/kerey-zhanybek') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                        <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-full object-contain mx-auto">
-                    </div>
+                    <img src="{{ asset('images/kerey-zhanybek.jpg') }}" alt="Керей мен Жәнібек" class="w-full h-[300px] object-cover">
                     <div class="p-6 text-gray-800">
                         <h3 class="text-2xl font-bold mb-2">Керей мен Жәнібек</h3>
                         <p>Қазақ хандығының негізін қалаған алғашқы хандар. Тарихта алғаш рет дербес қазақ мемлекетін құрып, ұлт болмысының іргесін қалаған қайраткерлер.</p>
@@ -36,9 +32,7 @@
 
                 <!-- Әлихан Бөкейхан -->
                 <a href="{{ url('/figures/alikhan') }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-                    <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                        <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейхан" class="w-full h-full object-contain mx-auto">
-                    </div>
+                    <img src="{{ asset('images/alikhan.jpg') }}" alt="Әлихан Бөкейхан" class="w-full h-[300px] object-cover">
                     <div class="p-6 text-gray-800">
                         <h3 class="text-2xl font-bold mb-2">Әлихан Бөкейхан</h3>
                         <p>Алаш көсемі, ұлт-азаттық қозғалысының жетекшісі, саясаткер, ғалым және қоғам қайраткері. Ол қазақ мемлекеттілігін жаңғырту жолында еңбек етті.</p>

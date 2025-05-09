@@ -6,9 +6,7 @@
         <h1 class="text-3xl sm:text-4xl font-bold text-yellow-400 mb-8">{{ $item->title }}</h1>
 
         @if($item->image)
-            <div class="w-full max-w-full overflow-hidden mb-8 rounded-lg shadow-md">
-                <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full max-h-[600px] object-contain mx-auto">
-            </div>
+            <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full max-h-[500px] object-cover rounded-lg shadow-md mb-8">
         @endif
 
         <div class="prose prose-lg prose-invert max-w-none">
@@ -22,9 +20,7 @@
                     @foreach($relatedItems as $relatedItem)
                         <a href="{{ route('items.show', [$category->slug, $relatedItem->slug]) }}" class="bg-white bg-opacity-10 rounded-lg p-4 hover:bg-opacity-20 transition">
                             @if($relatedItem->image)
-                                <div class="w-full h-[120px] min-h-[100px] max-h-[200px] overflow-hidden mb-3 rounded-lg">
-                                    <img src="{{ $relatedItem->image_url }}" alt="{{ $relatedItem->title }}" class="w-full h-full object-contain mx-auto">
-                                </div>
+                                <img src="{{ $relatedItem->image_url }}" alt="{{ $relatedItem->title }}" class="w-full h-40 object-cover rounded-lg mb-3">
                             @endif
                             <h3 class="text-xl font-semibold text-yellow-300">{{ $relatedItem->title }}</h3>
                         </a>

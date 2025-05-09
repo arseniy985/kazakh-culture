@@ -13,11 +13,9 @@
             @forelse($items as $item)
                 <a href="{{ route('items.show', [$category->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                     @if($item->image)
-                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] overflow-hidden">
-                            <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
-                        </div>
+                        <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-[300px] object-cover">
                     @else
-                        <div class="w-full h-[200px] min-h-[150px] max-h-[300px] bg-gray-200 flex items-center justify-center">
+                        <div class="w-full h-[300px] bg-gray-200 flex items-center justify-center">
                             <span class="text-gray-400 text-2xl">Сурет жоқ</span>
                         </div>
                     @endif

@@ -41,7 +41,7 @@
 {{--    </div>--}}
 {{--</section>--}}
 
-<section id="about" class="relative bg-[#3b1f1f] w-full h-[85vh] bg-cover bg-center" style="background-image: url('/images/salt-dastur.jpg');">
+<section id="about" class="relative bg-[#3b1f1f] w-full h-[100vh] bg-cover bg-center" style="background-image: url('/images/salt-dastur.jpg');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
         <div class="bg-black bg-opacity-40 p-8 rounded-xl shadow-xl max-w-3xl">

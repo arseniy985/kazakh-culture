@@ -205,6 +205,7 @@
 
             @php
                 $patternsCategory = \App\Models\Category::where('slug', 'patterns')->first();
+                $patterns = $patternsCategory ? $patternsCategory->items()->limit(3)->get() : collect();
             @endphp
             
             <!-- Ою-өрнек -->
@@ -216,8 +217,26 @@
                             {{ $patternsCategory->description }}
                         </p>
 
-                        <div class="text-center mt-8">
-                            <a href="{{ route('categories.show', $patternsCategory->slug) }}" class="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Ою-өрнектерді көру</a>
+                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            @foreach($patterns as $item)
+                                <a href="{{ route('items.show', [$patternsCategory->slug, $item->slug]) }}" class="block bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                                    @if($item->image)
+                                        <div class="w-full aspect-[2/1] relative overflow-hidden">
+                                            <img src="{{ $item->image_url }}" alt="{{ $item->title }}" class="w-full h-full object-contain mx-auto">
+                                        </div>
+                                    @endif
+                                    <div class="p-6 text-gray-800">
+                                        <h3 class="text-2xl font-bold mb-2">{{ $item->title }}</h3>
+                                        <p>{{ Str::limit(strip_tags($item->content), 100) }}</p>
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
+
+                        <div class="text-center mt-10">
+                            <a href="{{ route('categories.show', $patternsCategory->slug) }}" class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg transition duration-300 hover:bg-yellow-500">
+                                Барлық ою-өрнектерді көру
+                            </a>
                         </div>
                     </div>
                 </section>
